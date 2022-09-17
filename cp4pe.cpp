@@ -24,7 +24,7 @@ int main()
    
    completar();
    cout<<"Ingrese el ID de un paquete: "; cin>>num;
-
+do{
    for( int i=0; i<5;i++){
       
       if(paquete[i].ID==num){
@@ -40,7 +40,7 @@ int main()
       if(intento>3){
          break;
       }
-   }
+   }}while(intento<=3);
 
 
 return 0;
