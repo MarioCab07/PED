@@ -12,7 +12,7 @@ struct Paquetes
    int peso;
    string Fragil;
    char Tamanio;
-} paquete[2];
+} paquete[5];
 
 void completar(int);
 
@@ -26,7 +26,7 @@ int main()
 
    do
    {
-      cout << "Ingrese el ID de un paquete: ";
+      cout << " ";
       cin >> num;
       for (i = 0; i < n; i++)
       {
