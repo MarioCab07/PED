@@ -2,12 +2,7 @@
 
 using namespace std;
 
-void compArreglo(int *x, int y);
 
-
-void ordenar(int *x, int y);
-
-void imprimir(int *x, int y);
 
 struct Paquetes
 {
@@ -17,16 +12,16 @@ struct Paquetes
    char Tamanio;
 } paquete[5];
 
-void completar();
+void completar(int);
 
 int main()
 {
    int num, intento = 0, n;
+   n=sizeof(paquete)/sizeof(paquete[0]);
    
-   
-   completar();
+   completar(n);
    cout<<"Ingrese el ID de un paquete: "; cin>>num;
-
+   do{
    for( int i=0; i<5;i++){
       
       if(paquete[i].ID==num){
@@ -37,12 +32,18 @@ int main()
       }else{
          intento++;
         
-      }
+      
+   }}}while(intento<=3);
 
-      if(intento>3){
-         break;
-      }
+   return 0;
+   
+}
+
+void completar(int n){
+
+   for(int i=0; i<n;i++){
+
+      cout<<""
    }
 
-
-
+}
