@@ -4,67 +4,45 @@ using namespace std;
 
 void compArreglo(int *x, int y);
 
+
 void ordenar(int *x, int y);
 
 void imprimir(int *x, int y);
 
+struct Paquetes
+{
+   int ID;
+   int peso;
+   string Fragil;
+   char Tamanio;
+} paquete[5];
 
-int main(){
+void completar();
 
-   int *p, n;
-   cout<<"Ingrese el numero de elementos: "; cin>>n;
-
-   p= new int [n];
-
-   compArreglo(p,n);
+int main()
+{
+   int num, intento = 0, n;
    
-   //imprimir(p,n);
+   
+   completar();
+   cout<<"Ingrese el ID de un paquete: "; cin>>num;
 
-   ordenar(p,n);
-   imprimir(p,n);
-   delete[] p;
-
-   return 0;
-}
-
-void compArreglo(int *x, int y){
-
-   for(int i=0; i<y; i++){
-
-      cout<<"Ingrese el elemento "<<i+1<<": "; cin>>x[i];
-   }
-}
-
-void ordenar(int *x, int y){
-
-   int max, aux, i,j;
-
-   for(i=0; i<y;i++){
-
-      max=i;
-
-      for(j=i+1; j<y;j++){
-
-         if(x[j]>x[max]){
-            max=j;
-         }
+   for( int i=0; i<5;i++){
+      
+      if(paquete[i].ID==num){
+         cout<<"ID: "<<paquete[i].ID<<endl;
+         cout<<"Peso: "<<paquete[i].peso<<endl;
+         cout << "Fragil: " << paquete[i].Fragil << endl;
+         cout << "Tamanio: " << paquete[i].Tamanio << endl;
+      }else{
+         intento++;
+        
       }
 
-      aux=x[i];
-      x[i]=x[max];
-      x[max]=aux;
+      if(intento>3){
+         break;
+      }
    }
 
 
 
-}
-
-
-void imprimir(int *x, int y){
-
-   for (int i=0; i<y; i++){
-
-      cout<<"Elemento "<<i+1<<": "<<x[i]<<endl<<endl;
-      
-   }
-}
