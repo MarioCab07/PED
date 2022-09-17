@@ -26,7 +26,7 @@ int main()
 
    do
    {
-      cout << "";
+      cout << "Ingrese el ID de un paquete: ";
       cin >> num;
       for (i = 0; i < n; i++)
       {
